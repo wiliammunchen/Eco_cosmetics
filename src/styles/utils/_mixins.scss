@@ -1,6 +1,56 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@use 'sass:map';
+
+$breakpoints: (
+  tablet: $bp-tablet,
+  tablet-large: $bp-tablet-large,
+  desktop: $bp-desktop,
+  wide: $bp-wide,
+);
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+
+  @include respond-to(tablet) {
+    width: min(100% - 48px, 1200px);
+  }
+
+  @include respond-to(desktop) {
+    width: min(100% - 80px, 1200px);
+  }
+}
+
+@mixin hover-supported {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid $color-green;
+    outline-offset: 4px;
+  }
+}
+
+@mixin interactive-lift($distance: -6px) {
+  transition:
+    transform $transition-duration $transition-easing,
+    box-shadow $transition-duration $transition-easing,
+    background-color $transition-duration $transition-easing,
+    color $transition-duration $transition-easing,
+    border-color $transition-duration $transition-easing,
+    opacity $transition-duration $transition-easing;
+
+  @include hover-supported {
+    transform: translateY($distance);
   }
 }

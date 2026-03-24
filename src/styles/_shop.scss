@@ -1,0 +1,153 @@
+.shop {
+  padding: 20px 0 80px;
+
+  @include respond-to(desktop) {
+    padding-bottom: 110px;
+  }
+}
+
+.shop__container {
+  @include container;
+}
+
+.shop__header {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 32px;
+
+  @include respond-to(tablet) {
+    grid-template-columns: auto 1fr;
+    align-items: end;
+    justify-content: space-between;
+  }
+}
+
+.shop__title {
+  @extend %section-title;
+}
+
+.shop__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @include respond-to(tablet) {
+    justify-content: flex-end;
+  }
+}
+
+.shop__tab {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid $color-border;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-green;
+  transition:
+    background-color $transition-duration $transition-easing,
+    border-color $transition-duration $transition-easing,
+    color $transition-duration $transition-easing,
+    transform $transition-duration $transition-easing;
+  @include focus-ring;
+
+  @include hover-supported {
+    transform: translateY(-3px);
+    border-color: $color-green;
+  }
+}
+
+.shop__tab--active {
+  background-color: $color-green;
+  border-color: $color-green;
+  color: $color-white;
+}
+
+.shop__slider {
+  display: grid;
+  gap: 18px;
+  align-items: center;
+
+  @include respond-to(tablet) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+}
+
+.shop__arrow {
+  position: relative;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  border: 1px solid $color-border;
+  border-radius: 50%;
+  color: $color-green;
+  background-color: rgba(255, 255, 255, 0.7);
+  @include interactive-lift(-4px);
+  @include focus-ring;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+  }
+}
+
+.shop__arrow--prev::before {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+
+.shop__arrow--next::before {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
+
+.shop__arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.shop__viewport {
+  min-width: 0;
+}
+
+.shop__products {
+  display: grid;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.shop__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.shop__button {
+  @extend %button-base;
+
+  background-color: $color-green;
+  color: $color-white;
+
+  @include hover-supported {
+    background-color: $color-green-dark;
+  }
+}

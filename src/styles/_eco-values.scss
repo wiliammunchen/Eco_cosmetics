@@ -1,0 +1,58 @@
+.eco-values {
+  padding: 20px 0 80px;
+
+  @include respond-to(desktop) {
+    padding-bottom: 110px;
+  }
+}
+
+.eco-values__container {
+  @include container;
+}
+
+.eco-values__title {
+  @extend %section-title;
+
+  max-width: 16ch;
+  margin-bottom: 28px;
+}
+
+.eco-values__grid {
+  display: grid;
+  gap: 20px;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.eco-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 28px 24px;
+  border: 1px solid $color-border;
+  border-radius: 28px;
+  background-color: rgba(255, 253, 249, 0.84);
+  box-shadow: $shadow-soft;
+  @include interactive-lift;
+}
+
+.eco-card__icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.eco-card__title {
+  margin: 0;
+  font-family: $font-heading;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: $color-green;
+}
+
+.eco-card__text {
+  @extend %body-text;
+}

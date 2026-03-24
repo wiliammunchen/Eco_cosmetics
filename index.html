@@ -6,14 +6,685 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Title</title>
+    <meta
+      name="description"
+      content="Eco cosmetics landing page with natural skincare, candles, eco-friendly ingredients and contact form."
+    />
+    <title>Eco cosmetics</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="src/images/favicon.svg"
+    />
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
     />
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script src="src/scripts/main.js"></script>
+  <body class="page">
+    <header class="site-header">
+      <div class="site-header__container">
+        <a
+          class="site-header__logo"
+          href="#"
+          aria-label="Eco cosmetics home"
+        >
+          <img
+            class="site-header__logo-image"
+            src="src/images/logo.svg"
+            alt="Eco cosmetics"
+          />
+        </a>
+
+        <button
+          class="site-header__menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="site-header__menu-line"></span>
+          <span class="site-header__menu-line"></span>
+          <span class="site-header__menu-line"></span>
+        </button>
+
+        <nav
+          class="site-header__nav"
+          aria-label="Primary navigation"
+        >
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link"
+                href="#shop"
+              >
+                Shop
+              </a>
+            </li>
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link"
+                href="#about"
+              >
+                About
+              </a>
+            </li>
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link"
+                href="#ingredients"
+              >
+                Ingredients
+              </a>
+            </li>
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link"
+                href="#contact"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          class="site-header__cart"
+          href="#shop"
+          aria-label="Go to shop"
+        >
+          <img
+            class="site-header__cart-icon"
+            src="src/images/basket.svg"
+            alt=""
+          />
+        </a>
+      </div>
+
+      <nav
+        class="site-header__mobile-menu"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
+      >
+        <ul class="site-header__mobile-list">
+          <li class="site-header__mobile-item">
+            <a
+              class="site-header__mobile-link"
+              href="#shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li class="site-header__mobile-item">
+            <a
+              class="site-header__mobile-link"
+              href="#about"
+            >
+              About
+            </a>
+          </li>
+          <li class="site-header__mobile-item">
+            <a
+              class="site-header__mobile-link"
+              href="#ingredients"
+            >
+              Ingredients
+            </a>
+          </li>
+          <li class="site-header__mobile-item">
+            <a
+              class="site-header__mobile-link"
+              href="#contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page__main">
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Witch of mountain winds</p>
+            <h1 class="hero__title">
+              Brand of eco-cosmetics and magic candles
+            </h1>
+            <p class="hero__text">
+              Natural care for skin, hair and home rituals. Twenty percent of
+              every order supports a wild bird shelter.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="hero__button"
+                href="#shop"
+              >
+                Shop
+              </a>
+              <a
+                class="text-link hero__link"
+                href="#about"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__media">
+            <img
+              class="hero__image"
+              src="src/images/main-img.jpg"
+              alt="Natural eco cosmetics products on a neutral background"
+            />
+            <div class="hero__badge">
+              <span class="hero__badge-number">20%</span>
+              <span class="hero__badge-text">of sales support rescued birds</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-intro">
+        <div class="story-intro__container">
+          <p class="story-intro__note">
+            Biologists say birds reflect the health of our environment. Their
+            population keeps shrinking because of pollution and careless
+            consumption.
+          </p>
+          <p class="story-intro__message">
+            If you choose the gifts of nature and care about it, scroll down.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="about-brand"
+        id="about"
+      >
+        <div class="about-brand__container">
+          <div class="about-brand__content">
+            <p class="section-label">About our brand</p>
+            <h2 class="about-brand__title">About our brand</h2>
+            <p class="about-brand__text">
+              Our cosmetics are made from natural ingredients and packaged with
+              respect for the planet. Shampoo bars, soaps and labels rely on
+              recycled paper, while creams and oils come in reusable glass
+              containers.
+            </p>
+            <p class="about-brand__text">
+              We reject synthetics and microplastics, and we design every pack
+              so it can be returned, recycled or repurposed. Caring for your
+              body should not harm the place we all share.
+            </p>
+            <a
+              class="text-link"
+              href="#ingredients"
+            >
+              Learn more
+            </a>
+          </div>
+
+          <div class="about-brand__gallery">
+            <img
+              class="about-brand__image about-brand__image--large"
+              src="src/images/candle-big.jpg"
+              alt="Large scented candle with natural decorations"
+            />
+            <img
+              class="about-brand__image about-brand__image--small"
+              src="src/images/candle-small.jpg"
+              alt="Small eco candle in minimalist packaging"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="shop"
+        id="shop"
+      >
+        <div class="shop__container">
+          <div class="shop__header">
+            <div>
+              <p class="section-label">Shop</p>
+              <h2 class="shop__title">Shop</h2>
+            </div>
+
+            <div
+              class="shop__tabs"
+              role="tablist"
+              aria-label="Shop categories"
+            >
+              <button
+                class="shop__tab shop__tab--active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-category="face"
+              >
+                Face
+              </button>
+              <button
+                class="shop__tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-category="body"
+              >
+                Body
+              </button>
+              <button
+                class="shop__tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-category="hair"
+              >
+                Hair
+              </button>
+              <button
+                class="shop__tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-category="candles"
+              >
+                Candles
+              </button>
+            </div>
+          </div>
+
+          <div class="shop__slider">
+            <button
+              class="shop__arrow shop__arrow--prev"
+              type="button"
+              aria-label="Show previous products"
+            ></button>
+
+            <div class="shop__viewport">
+              <ul
+                class="shop__products"
+                id="shop-products"
+                aria-live="polite"
+              ></ul>
+            </div>
+
+            <button
+              class="shop__arrow shop__arrow--next"
+              type="button"
+              aria-label="Show next products"
+            ></button>
+          </div>
+
+          <div class="shop__footer">
+            <a
+              class="shop__button"
+              href="#contact"
+            >
+              All products
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="creators">
+        <div class="creators__container">
+          <div class="creators__content">
+            <p class="section-label">About the creators</p>
+            <h2 class="creators__title">About the creators</h2>
+            <p class="creators__text">
+              Victoria creates the formulas for every candle, powder and oil.
+              Her work grew from years of studying herbs, natural care and the
+              quiet rituals of mountain life.
+            </p>
+            <p class="creators__text">
+              Together with her husband, she also volunteers to rescue wild
+              birds and supports rehabilitation initiatives in the Carpathian
+              region. The brand exists to fund that care as much as it exists to
+              make beautiful products.
+            </p>
+            <a
+              class="text-link"
+              href="#contact"
+            >
+              Learn more
+            </a>
+            <a
+              class="creators__button"
+              href="#contact"
+            >
+              To contact us
+            </a>
+          </div>
+
+          <div class="creators__media">
+            <img
+              class="creators__image"
+              src="src/images/bird.jpg"
+              alt="Wild bird perched among soft natural colors"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="ingredients"
+        id="ingredients"
+      >
+        <div class="ingredients__container">
+          <div class="ingredients__content">
+            <p class="section-label">Ingredients</p>
+            <h2 class="ingredients__title">Ayurvedic Tooth Powder</h2>
+            <p class="ingredients__text">
+              A mineral and botanical blend for a clean, bright ritual without
+              harsh additives.
+            </p>
+            <ul class="ingredients__list">
+              <li class="ingredients__item">Kaolin</li>
+              <li class="ingredients__item">Salvador persica</li>
+              <li class="ingredients__item">Calcium carbonate</li>
+              <li class="ingredients__item">Licorice root</li>
+              <li class="ingredients__item">Turmeric</li>
+            </ul>
+            <a
+              class="text-link"
+              href="#contact"
+            >
+              Learn more
+            </a>
+          </div>
+
+          <div class="ingredients__media">
+            <img
+              class="ingredients__image"
+              src="src/images/jar.png"
+              alt="Glass jar with ayurvedic tooth powder illustration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="eco-values">
+        <div class="eco-values__container">
+          <h2 class="eco-values__title">Why people choose Eco cosmetics</h2>
+
+          <div class="eco-values__grid">
+            <article class="eco-card">
+              <img
+                class="eco-card__icon"
+                src="src/images/no-synt.png"
+                alt="No synthetics icon"
+              />
+              <h3 class="eco-card__title">No synthetics</h3>
+              <p class="eco-card__text">
+                No microplastics, no fillers and no harsh ingredients in our
+                daily essentials.
+              </p>
+            </article>
+
+            <article class="eco-card">
+              <img
+                class="eco-card__icon"
+                src="src/images/recycled.png"
+                alt="Recycled packaging icon"
+              />
+              <h3 class="eco-card__title">Recycled packaging</h3>
+              <p class="eco-card__text">
+                Glass jars, recycled labels and packaging designed to be reused
+                or recycled after use.
+              </p>
+            </article>
+
+            <article class="eco-card">
+              <img
+                class="eco-card__icon"
+                src="src/images/only-natural.png"
+                alt="Natural ingredients icon"
+              />
+              <h3 class="eco-card__title">Only natural ingredients</h3>
+              <p class="eco-card__text">
+                Plant-based formulas inspired by ayurvedic routines and mountain
+                herbs.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact"
+        id="contact"
+      >
+        <div class="contact__container">
+          <div class="contact__content">
+            <p class="section-label">Help</p>
+            <h2 class="contact__title">Contact us</h2>
+            <p class="contact__text">
+              We will help you choose a product that suits you and answer any
+              questions about ingredients, delivery or collaboration.
+            </p>
+
+            <form
+              class="contact__form"
+              action="#"
+              method="post"
+              novalidate
+            >
+              <label class="contact__field">
+                <span class="contact__label">Your name</span>
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+
+              <label class="contact__field">
+                <span class="contact__label">Email</span>
+                <input
+                  class="contact__input"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+
+              <label class="contact__field">
+                <span class="contact__label">Phone number</span>
+                <input
+                  class="contact__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+38 (093) 447-68-39"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  pattern="\\+?[0-9\\s()\\-]{10,20}"
+                  title="Use only digits, spaces, parentheses or hyphens, for example +38 (093) 447-68-39."
+                  required
+                />
+              </label>
+
+              <label class="contact__field contact__field--textarea">
+                <span class="contact__label">Message</span>
+                <textarea
+                  class="contact__input contact__input--textarea"
+                  name="message"
+                  placeholder="Tell us what you are looking for"
+                  rows="4"
+                  required
+                ></textarea>
+              </label>
+
+              <button
+                class="contact__button"
+                type="submit"
+              >
+                Send a message
+              </button>
+
+              <p
+                class="contact__status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+
+          <div class="contact__media">
+            <img
+              class="contact__image"
+              src="src/images/contact-bird.jpg"
+              alt="Bird resting near natural branches"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <div class="site-footer__brand">
+          <a
+            class="site-footer__logo"
+            href="#"
+            aria-label="Eco cosmetics home"
+          >
+            <img
+              class="site-footer__logo-image"
+              src="src/images/logo.svg"
+              alt="Eco cosmetics"
+            />
+          </a>
+          <p class="site-footer__description">
+            Small-batch natural cosmetics and candles made with a lighter
+            footprint.
+          </p>
+        </div>
+
+        <nav
+          class="site-footer__nav"
+          aria-label="Footer navigation"
+        >
+          <a
+            class="site-footer__nav-link"
+            href="#shop"
+          >
+            Shop
+          </a>
+          <a
+            class="site-footer__nav-link"
+            href="#about"
+          >
+            About
+          </a>
+          <a
+            class="site-footer__nav-link"
+            href="#ingredients"
+          >
+            Ingredients
+          </a>
+          <a
+            class="site-footer__nav-link"
+            href="#contact"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <div class="site-footer__contacts">
+          <a
+            class="site-footer__contact-link"
+            href="https://maps.google.com/?q=Chernivtsi%2C%20Ukraine"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chernivtsi, Ukraine
+          </a>
+          <a
+            class="site-footer__contact-link"
+            href="mailto:support.mountain@gmail.com"
+          >
+            support.mountain@gmail.com
+          </a>
+          <a
+            class="site-footer__contact-link"
+            href="tel:+380934476839"
+          >
+            +38 093 447 68 39
+          </a>
+          <p class="site-footer__support">
+            Support is available Monday to Friday, 9:00 AM to 6:00 PM
+          </p>
+        </div>
+
+        <div class="site-footer__socials">
+          <a
+            class="site-footer__social-link"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook"
+          >
+            <svg
+              class="site-footer__social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M13.5 22v-8.1h2.7l.4-3.1h-3.1V8.8c0-.9.3-1.5 1.6-1.5H17V4.5c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.2H7.7v3.1h2.7V22h3.1Z"
+              />
+            </svg>
+          </a>
+          <a
+            class="site-footer__social-link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <svg
+              class="site-footer__social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M7.2 3h9.6A4.2 4.2 0 0 1 21 7.2v9.6a4.2 4.2 0 0 1-4.2 4.2H7.2A4.2 4.2 0 0 1 3 16.8V7.2A4.2 4.2 0 0 1 7.2 3Zm0 1.8A2.4 2.4 0 0 0 4.8 7.2v9.6a2.4 2.4 0 0 0 2.4 2.4h9.6a2.4 2.4 0 0 0 2.4-2.4V7.2a2.4 2.4 0 0 0-2.4-2.4H7.2Zm9.9 1.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4Zm0 1.8A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Z"
+              />
+            </svg>
+          </a>
+          <a
+            class="site-footer__social-link"
+            href="https://www.pinterest.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Pinterest"
+          >
+            <svg
+              class="site-footer__social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-2 .3-2.9l1.4-5.9s-.4-.8-.4-1.9c0-1.8 1.1-3.1 2.4-3.1 1.1 0 1.7.9 1.7 2 0 1.2-.8 3-1.2 4.7-.3 1.4.7 2.5 2 2.5 2.4 0 4-3.1 4-6.7 0-2.8-1.9-4.9-5.3-4.9-3.9 0-6.3 2.9-6.3 6.1 0 1.1.3 2 .9 2.7.2.2.2.3.1.6l-.3 1.1c-.1.4-.5.6-.9.4-1.8-.8-2.9-3-2.9-5.4C4 6.1 7.2 2 12 2Zm-.6 13.7c-.2.9-.6 1.8-1 2.6.8.3 1.7.5 2.6.5 5 0 8.6-3.7 8.6-9.1C21.6 5.6 17.8 2 12.3 2c-4.8 0-8.4 3.4-8.4 7.7 0 3 1.8 5.3 4.3 6.1.3.1.5.1.6-.3l.4-1.6c.1-.2 0-.4-.2-.7-.5-.6-.8-1.5-.8-2.4 0-2.3 1.7-4.4 4.7-4.4 2.6 0 4 1.6 4 3.7 0 2.8-1.2 5.1-3 5.1-.9 0-1.6-.7-1.4-1.7.3-1.2.9-2.5.9-3.4 0-.8-.4-1.5-1.3-1.5-1 0-1.9 1-1.9 2.4 0 .9.3 1.5.3 1.5l-1.2 5.1Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="site-footer__copyright">
+        Copyright &copy; 2019 Witch of mountain winds
+      </p>
+    </footer>
+
+    <script
+      type="module"
+      src="src/scripts/main.js"
+    ></script>
   </body>
 </html>

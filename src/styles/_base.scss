@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(232, 220, 207, 0.8),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #fbf7f0 0%, $color-cream 38%, #f5efe5 100%);
+  color: $color-text;
+  font-family: $font-body;
+}
+
+body.body--menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  min-width: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+section[id] {
+  scroll-margin-top: calc(#{$header-height-mobile} + 24px);
+
+  @include respond-to(desktop) {
+    scroll-margin-top: calc(#{$header-height-desktop} + 32px);
+  }
+}
+
+::selection {
+  background: rgba(52, 79, 16, 0.18);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px $color-surface inset;
+  -webkit-text-fill-color: $color-text;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.page__main {
+  display: block;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $color-green-light;
+
+  &::before {
+    content: '';
+    width: 36px;
+    height: 1px;
+    background-color: currentColor;
+  }
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-body;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-green;
+  transition:
+    color $transition-duration $transition-easing,
+    transform $transition-duration $transition-easing;
+
+  &::after {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  @include hover-supported {
+    color: $color-green-dark;
+    transform: translateX(6px);
+  }
+
+  @include focus-ring;
+}
+
+.product-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  border-radius: 28px;
+  background-color: $color-surface;
+  box-shadow: $shadow-soft;
+  @include interactive-lift;
+}
+
+.product-card__media {
+  aspect-ratio: 5 / 6;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 220, 207, 0.55),
+    rgba(52, 79, 16, 0.05)
+  );
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform $transition-duration $transition-easing,
+    filter $transition-duration $transition-easing;
+
+  .product-card:hover & {
+    transform: scale(1.05);
+    filter: saturate(1.05);
+  }
+}
+
+.product-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.product-card__category {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-green-light;
+}
+
+.product-card__title {
+  margin: 0;
+  font-family: $font-heading;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: $color-green;
+}
+
+.product-card__description {
+  @extend %body-text;
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.product-card__price {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $color-text;
+}
+
+.product-card__button {
+  @extend %button-base;
+
+  min-height: 46px;
+  padding: 0 20px;
+  background-color: rgba(52, 79, 16, 0.08);
+  color: $color-green;
+
+  @include hover-supported {
+    background-color: $color-green;
+    color: $color-white;
+  }
+}

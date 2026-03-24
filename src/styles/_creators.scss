@@ -1,0 +1,71 @@
+.creators {
+  padding: 20px 0 80px;
+
+  @include respond-to(desktop) {
+    padding-bottom: 110px;
+  }
+}
+
+.creators__container {
+  @include container;
+
+  display: grid;
+  gap: 40px;
+
+  @include respond-to(desktop) {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: center;
+    gap: 56px;
+  }
+}
+
+.creators__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.creators__title {
+  @extend %section-title;
+}
+
+.creators__text {
+  @extend %body-text;
+
+  margin-top: 20px;
+  max-width: 34rem;
+}
+
+.creators__button {
+  @extend %button-base;
+
+  margin-top: 28px;
+  background-color: $color-green;
+  color: $color-white;
+
+  @include hover-supported {
+    background-color: $color-green-dark;
+  }
+}
+
+.creators__media {
+  position: relative;
+}
+
+.creators__media::before {
+  content: '';
+  position: absolute;
+  inset: auto 24px -24px -24px;
+  border-radius: 28px;
+  background-color: rgba(52, 79, 16, 0.1);
+}
+
+.creators__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 380px;
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: $shadow-card;
+}
