@@ -10,49 +10,40 @@
   @include container;
 }
 
-.eco-values__title {
-  @extend %section-title;
-
-  max-width: 16ch;
-  margin-bottom: 28px;
-}
-
 .eco-values__grid {
   display: grid;
-  gap: 20px;
+  gap: 32px;
 
-  @include respond-to(tablet) {
+  @include respond-to(tablet-large) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
   }
 }
 
-.eco-card {
+// Each eco-value card — centered icon + centered title
+.eco-value {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 28px 24px;
-  border: 1px solid $color-border;
-  border-radius: 28px;
-  background-color: rgba(255, 253, 249, 0.84);
-  box-shadow: $shadow-soft;
-  @include interactive-lift;
+  gap: 20px;
+  align-items: center;
+
+  text-align: center;
 }
 
-.eco-card__icon {
+.eco-value__icon {
   width: 72px;
   height: 72px;
   object-fit: contain;
 }
 
-.eco-card__title {
+.eco-value__title {
   margin: 0;
-  font-family: $font-heading;
-  font-size: 1.4rem;
-  line-height: 1.1;
-  color: $color-green;
-}
 
-.eco-card__text {
-  @extend %body-text;
+  font-family: $font-heading;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  color: $color-green;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
